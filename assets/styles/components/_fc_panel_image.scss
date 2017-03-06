@@ -1,0 +1,48 @@
+.panel-image {
+  //background: url('../../images/img-panel.png') no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  .text-overlay {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    position: relative;
+    top: 250px;
+    @include respondTo(desktop,large){
+      width: 450px;
+
+    };
+    // width: 450px;
+    height: 320px;
+    // background: $orange-transparent;
+    .text-wrapper {
+      margin: 0 auto;
+      @include respondTo(desktop,large){
+        width: 350px;
+
+      };
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .icon {
+      width: 35px;
+    }
+    h3 {
+      letter-spacing: 1px;
+      text-align: left;
+      color: $white;
+      text-transform: uppercase;
+    }
+    p {
+      text-align: left;
+      font-size: 14px;
+    }
+  }
+  .button {
+    margin: 0;
+    margin-top: 20px;
+    color: $white;
+    // background: $light-black;
+    font-size: 14px;
+  }
+}

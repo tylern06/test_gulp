@@ -1,0 +1,195 @@
+.blog-wrapper {
+	padding-top: 80px;
+	padding-bottom: 80px;
+   background: white;
+
+	h1 {
+		&.blog-title {
+			font-size: 50px;
+			text-transform: inherit;
+		}
+	}
+}
+
+.navigation.posts-navigation {
+   h2 {
+      display: none;
+   }
+
+   .nav-links {
+      .nav-previous {
+         float: left;
+      }
+      .nav-next {
+         float: right;
+      }
+   }
+}
+
+.blog-main {
+	padding-right: 40px;
+   font-size: 17px;
+
+   header {
+      background: #fff;
+   }
+
+	h1, h2 {
+		//color: $font-color-teal-medium;
+	}
+
+	h1 {
+      font-size: 24px;
+	}
+
+	h2 {
+      font-size: 27px;
+      font-weight: normal;
+      margin-bottom: 10px;
+
+		a {
+			text-transform: none;
+		}
+	}
+
+	.post {
+		img.wp-post-image {
+			//float: right;
+			//max-height: 180px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			//max-height: 370px;
+		}
+
+		.continued {
+			//color: $font-color-teal-medium;
+			font-style: italic;
+		}
+	}
+
+	time, .byline {
+      font-size: 14px;
+	}
+
+	article {
+		overflow: hidden;
+		margin-bottom: 40px;
+	}
+
+	.article-footer {
+		margin-top: 40px;
+      font-size: 14px;
+	}
+}
+
+
+.blog {
+
+	.blog-main {
+
+		.post {
+			img.wp-post-image {
+				float: right;
+				//max-height: 180px;
+				margin-top: 0;
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+		}
+
+		h2 {
+
+		}
+	}
+}
+
+
+.single-post {
+
+	.blog-main {
+
+		h1 {
+			text-transform: none;
+		}
+
+		h2 {
+			//font-family: noto sans;
+			margin-top: 30px;
+			text-transform: none;
+		}
+	}
+}
+
+.blog-sidebar {
+   font-size: 14px;
+
+	.widget {
+		margin-top: 30px;
+
+		h3 {
+			font-weight: 600;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+	}
+
+	.search-form {
+		.input-group {
+			.search-field {
+				padding: 16px;
+				border-right: none;
+
+			}
+
+			button.btn {
+				padding: 8px;
+				font-size: 12px;
+				letter-spacing: 1.5px;
+				line-height: 1.36em;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+
+
+	h3 {
+      font-size: 16px;
+		//color: $font-color-teal-medium;
+	}
+
+	ul {
+		padding-left: 0;
+		list-style: none;
+
+		li {
+			margin-bottom: 4px;
+
+			a {
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.page-header-wrapper {
+		//background: $bg-color-teal-light;
+
+	.page-header {
+		//margin: 20px;
+		border: none;
+
+		h1 {
+			//color: $font-color-teal-medium;
+         font-size: 30px;
+			padding-top: 20px;
+		}
+	}
+}

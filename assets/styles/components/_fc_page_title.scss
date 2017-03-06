@@ -1,0 +1,22 @@
+.page-title {
+   height: 25px;
+   z-index: 1;
+   width: 100%;
+   position: fixed;
+   //margin-top: 70px;
+   opacity: 0.80;
+
+   @include respondTo(phone) {
+      margin-top: 0px !important;
+   }
+
+   h1 {
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      float: right;
+      text-transform: uppercase;
+      margin-top: 6px;
+      margin-bottom: 5px;
+   }
+}

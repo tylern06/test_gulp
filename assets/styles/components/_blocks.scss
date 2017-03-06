@@ -1,0 +1,67 @@
+.hero-wrapper {
+  .container {
+    @include respondTo(desktop,huge) {
+      //width: 1600px;
+    }
+  }
+}
+.hero-panel {
+  .hero-image {
+    width: 100%;
+    max-height: 730px;
+  }
+  .hero-title-wrapper {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    background: rgba(14,23,45,0.8);
+    bottom: 0px;
+    @include respondTo(above-phone,tablet,desktop,large) {
+      bottom: 80px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: $white;
+      letter-spacing: 2px;
+      @include respondTo(phone){
+          font-size: 18px;
+        }
+    }
+    .hero-title {
+      margin: 20px auto;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      @include respondTo(phone){
+        border-bottom: none;
+      }
+      width: 80%;
+      min-height: 50px;
+      @include respondTo(above-phone,tablet, desktop,large){
+        min-height: 132px;
+      }
+    }
+    .flex-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      resize: vertical;
+      // overflow: auto;
+      h1 {
+        margin: 0;
+        padding: 20px;
+        color: $white;
+        letter-spacing:  2px;
+        @include respondTo(large){
+          font-size: 50px;
+        }
+        @include respondTo(tablet){
+          font-size: 40px;
+        }
+        @include respondTo(phone){
+          font-size: 25px;
+        };
+        font-weight: bold;
+      }
+    }
+  }
+}

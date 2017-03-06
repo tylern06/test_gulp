@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'LatoLight';
+  src: url('../fonts/Lato-Light.ttf');
+}
+
+@font-face {
+  font-family: 'LatoLightItalic';
+  src: url('../fonts/Lato-LightItalic.ttf');
+}
+
+@font-face {
+  font-family: 'LatoRegular';
+  src: url('../fonts/Lato-Regular.ttf');
+}
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url('../fonts/SourceSansPro-Black.ttf');
+}
+
+//etta and essie
+$font-lato-regular: 'LatoRegular';
+$font-lato-light: 'LatoLight';
+$font-lato-light-italic: 'LatoLightItalic';
+$font-source-sans-pro: 'SourceSansPro';
+
+body {
+  font-size: 16px;
+  font-family: $font-lato-regular;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+  font-family: $font-source-sans-pro;
+
+}
+
+p, ul, ol, li {
+  font-weight: 100;
+  font-size: 16px;
+
+}
+
+.panel-wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}

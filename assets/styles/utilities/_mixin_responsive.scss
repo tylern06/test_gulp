@@ -1,0 +1,45 @@
+/**
+ * Responsive mixin. The media breakpoints are as defined in
+ * the twitter bootstrap framework and supports responding to:
+ * - phone
+ * - tablet
+ * - desktop
+ * - large
+ * - above-phone
+ * - above-tablet
+*/
+@mixin respondTo($media...) {
+   @each $mediatype in $media {
+      @include respondToHelper($mediatype) { @content; }
+   }
+}
+
+@mixin respondToHelper($media) {
+   @if $media == above-phone {
+      @media (min-width: 768px) { @content; }
+   }
+   @else if $media == above-tablet {
+      @media (min-width: 992px) { @content; }
+   }
+   @else if $media == desktop {
+      @media (min-width: 992px) and (max-width: 1199px) { @content; }
+   }
+   @else if $media == tablet {
+      @media (min-width: 768px) and (max-width: 991px) { @content; }
+   }
+   @else if $media == large {
+      @media (min-width: 1200px) { @content; }
+   }
+   @else if $media == huge {
+      @media (min-width: 1450px) { @content; }
+   }
+   @else if $media == phone {
+      @media (max-width: 767px) { @content; }
+   }
+   @else if $media == below-phone-landscape {
+      @media (max-width: 767px) { @content; }
+   }
+   @else if $media == above-phone-landscape {
+      @media (min-width: 768px) { @content; }
+   }
+}

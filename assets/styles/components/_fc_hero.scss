@@ -1,0 +1,155 @@
+/* Calculate fluid ratio based on two dimensions (width/height) */
+@mixin fluid-ratio($large-size, $small-size) {
+   $width-large: nth($large-size, 1);
+   $width-small: nth($small-size, 1);
+   $height-large: nth($large-size, 2);
+   $height-small: nth($small-size, 2);
+   $slope: ($height-large - $height-small) / ($width-large - $width-small);
+   $height: $height-small - $width-small * $slope;
+
+   max-width: $width-large;
+   max-height: $height-large;
+
+   background-size: cover;
+   -moz-background-size: cover;  /* Firefox 3.6 */
+   background-position: center;  /* Internet Explorer 7/8 */
+   background-position: 50% 50%;
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+
+   &:after {
+      content: " ";
+      display: block;
+      width: 100%;
+      padding-top: $slope * 100%;
+      height: $height;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+   }
+}
+
+.fc-hero {
+   @include fluid-ratio(1600px 700px, 300px 500px);
+
+   .hero-content {
+
+      .hero-title-wrapper {
+        width: 100%;
+        @include respondTo(above-phone) {
+          width: 70%;
+        }
+        background: rgba(14,23,45,0.8);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        bottom: 0px;
+
+        @include respondTo(above-phone,tablet,desktop,large) {
+          //bottom: 0px;
+        }
+
+        h3 {
+          margin-top: 20px;
+          color: $white;
+          letter-spacing: 2px;
+          // font-family: $font-raleway;
+          font-size: 20px;
+          font-weight: 500;
+          text-align: center;
+
+          @include respondTo(phone){
+              font-size: 18px;
+            }
+        }
+        .hero-title {
+          margin: 20px auto;
+          border-top: 1px solid rgba(255,255,255,0.5);
+          border-bottom: 1px solid rgba(255,255,255,0.5);
+          @include respondTo(phone){
+            border-bottom: none;
+          }
+          width: 80%;
+          min-height: 50px;
+          @include respondTo(above-phone,tablet, desktop,large){
+            min-height: 132px;
+          }
+        }
+        .flex-center {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          resize: vertical;
+          // overflow: auto;
+          h2 {
+            margin: 0;
+            padding: 20px;
+            padding-top: 10px;
+            // font-family: $font-libre-baskerville;
+            color: $white;
+            letter-spacing:  2px;
+            text-align: center;
+
+            @include respondTo(large){
+              font-size: 35px;
+            }
+            @include respondTo(tablet){
+              font-size: 30px;
+            }
+            @include respondTo(phone){
+              font-size: 20px;
+            };
+            font-weight: bold;
+          }
+        }
+      }
+
+   }
+
+   .arrow-down {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:hover {
+         cursor: pointer;
+      }
+
+      svg .cls-1 {
+         stroke: black;
+      }
+   }
+
+   &.background-style-0 {
+      .hero-content {
+         background: rgba(20,41,69,0.8);
+      }
+
+      h3, h4, p, a, h6 {
+         color: white;
+      }
+   }
+
+   &.background-style-1 {
+      .hero-content {
+         background: rgba(20,41,69,0.8); /* For browsers that do not support gradients */
+        //  background: -webkit-linear-gradient(left, $gradient-bright-color-1, $gradient-bright-color-2); /* For Safari 5.1 to 6.0 */
+        //  background: -o-linear-gradient(right, $gradient-bright-color-1, $gradient-bright-color-2); /* For Opera 11.1 to 12.0 */
+        //  background: -moz-linear-gradient(right, $gradient-bright-color-1, $gradient-bright-color-2); /* For Firefox 3.6 to 15 */
+        //  background: linear-gradient(right, $gradient-bright-color-1, $gradient-bright-color-2); /* Standard syntax */
+      }
+
+      p, a, h6 {
+        //  color: $navy;
+      }
+
+      h3, h4 {
+         color: white;
+      }
+   }
+}

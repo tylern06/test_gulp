@@ -1,0 +1,647 @@
+
+   $none: 0;
+   $x-small: 35px;
+   $small: 70px;
+   $medium: 100px;
+   $large: 140px;
+   $x-large: 170px;
+   $huge: 200px;
+
+   $mx-none: 0;
+   $mx-x-small: 500px;
+   $mx-small: 600px;
+   $mx-medium: 700px;
+   $mx-large: 800px;
+   $mx-x-large: 900px;
+   $mx-huge: 1040px;
+
+
+.fc-list {
+   position: relative;
+
+
+
+
+   .icon {
+     width: 80px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 20px;
+   }
+
+   // PANEL TOP
+   &.ptp-x-none {
+   }
+
+   &.ptp-x-small {
+     padding-top: $x-small;
+     @include respondTo(above-phone) {
+        padding-top: $x-small;
+     }
+   }
+   &.ptp-small {
+     padding-top: $small;
+     @include respondTo(above-phone) {
+        padding-top: $small;
+     }
+   }
+   &.ptp-medium {
+     padding-top: $small;
+     @include respondTo(above-phone) {
+        padding-top: $medium;
+     }
+   }
+   &.ptp-large {
+     padding-top: $small;
+     @include respondTo(above-phone) {
+        padding-top: $large;
+     }
+   }
+   &.ptp-x-large {
+     padding-top: $small;
+     @include respondTo(above-phone) {
+        padding-top: $x-large;
+     }
+   }
+   &.ptp-huge {
+     padding-top: $small;
+     @include respondTo(above-phone) {
+        padding-top: $huge;
+     }
+   }
+
+   // PANEL TOP
+   &.pbp-x-none {
+   }
+
+   &.pbp-x-small {
+     padding-bottom: $x-small;
+     @include respondTo(above-phone) {
+        padding-bottom: $x-small;
+     }
+   }
+   &.pbp-small {
+     padding-bottom: $small;
+     @include respondTo(above-phone) {
+        padding-bottom: $small;
+     }
+   }
+   &.pbp-medium {
+     padding-bottom: $small;
+     @include respondTo(above-phone) {
+        padding-bottom: $medium;
+     }
+   }
+   &.pbp-large {
+     padding-bottom: $small;
+     @include respondTo(above-phone) {
+        padding-bottom: $large;
+     }
+   }
+   &.pbp-x-large {
+     padding-bottom: $small;
+     @include respondTo(above-phone) {
+        padding-bottom: $x-large;
+     }
+   }
+   &.pbp-huge {
+     padding-bottom: $small;
+     @include respondTo(above-phone) {
+        padding-bottom: $huge;
+     }
+   }
+
+   .heading-top {
+
+     &.heading-top-bottom-borders {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+       .inner-wrapper {
+          display: inline-block;
+          padding: 14px 40px 14px 40px;
+       }
+
+     }
+
+     h2.heading {
+       font-size: 32px;
+       font-weight: normal;
+       line-height: 1.5em;
+       margin-top: 8px;
+     }
+
+     h3.heading.sub-heading {
+       font-weight: bold;
+       font-size: 18px;
+       text-transform: uppercase;
+       margin-bottom: 8px;
+     }
+   }
+
+
+   .heading {
+     margin-left: auto;
+     margin-right: auto;
+     // MAX WIDTH HEADING
+     &.mwh-x-none {
+     }
+
+     &.mwh-x-small {
+       @include respondTo(above-phone) {
+          max-width: $mx-x-small;
+       }
+     }
+
+     &.mwh-small {
+       @include respondTo(above-phone) {
+          max-width: $mx-small;
+       }
+     }
+     &.mwh-medium {
+       @include respondTo(above-phone) {
+          max-width: $mx-medium;
+       }
+     }
+     &.mwh-large {
+       @include respondTo(above-phone) {
+          max-width: $mx-large;
+       }
+     }
+     &.mwh-x-large {
+       @include respondTo(above-phone) {
+          max-width: $mx-x-large;
+       }
+     }
+     &.mwh-huge {
+       @include respondTo(above-phone) {
+          max-width: $mx-huge;
+       }
+     }
+   }
+
+
+
+
+
+   &.scroll-arrow {
+      padding-bottom: 150px !important;
+
+      &:after {
+         font-family: 'FontAwesome';
+         position: absolute;
+         content: '\f107';
+         bottom: 90px;
+         margin-left: auto;
+         margin-right: auto;
+         left: 0;
+         right: 0;
+         display: block;
+         text-align: center;
+         font-size: 250%;
+         color: inherit;
+         font-weight: lighter;
+      }
+   }
+
+   .item {
+      //margin-top: 50px;
+      padding: 10px;
+
+      // TOP & BELOW
+      &.bptb-x-none {
+      }
+
+      &.bptb-x-small {
+        @include respondTo(above-phone) {
+           padding-top: $x-small;
+        }
+      }
+
+      &.bptb-small {
+        @include respondTo(above-phone) {
+           padding-top: $small;
+        }
+      }
+      &.bptb-medium {
+        @include respondTo(above-phone) {
+           padding-top: $medium;
+        }
+      }
+      &.bptb-large {
+        @include respondTo(above-phone) {
+           padding-top: $large;
+        }
+      }
+      &.bptb-x-large {
+        @include respondTo(above-phone) {
+           padding-top: $x-large;
+        }
+      }
+      &.bptb-huge {
+        @include respondTo(above-phone) {
+           padding-top: $huge;
+        }
+      }
+
+      // LEFT PADDING
+      &.bpl-x-none {
+      }
+
+      &.bpl-x-small {
+        @include respondTo(above-phone) {
+           padding-left: $x-small;
+        }
+      }
+
+      &.bpl-small {
+        @include respondTo(above-phone) {
+           padding-left: $small;
+        }
+      }
+      &.bpl-medium {
+        @include respondTo(above-phone) {
+           padding-left: $medium;
+        }
+      }
+      &.bpl-large {
+        @include respondTo(above-phone) {
+           padding-left: $large;
+        }
+      }
+      &.bpl-x-large {
+        @include respondTo(above-phone) {
+           padding-left: $x-large;
+        }
+      }
+      &.bpl-huge {
+        @include respondTo(above-phone) {
+           padding-left: $huge;
+        }
+      }
+
+      // RIGHT PADDING
+      &.bpr-x-none {
+      }
+
+      &.bpr-x-small {
+        @include respondTo(above-phone) {
+           padding-right: $x-small;
+        }
+      }
+
+      &.bpr-small {
+        @include respondTo(above-phone) {
+           padding-right: $small;
+        }
+      }
+      &.bpr-medium {
+        @include respondTo(above-phone) {
+           padding-right: $medium;
+        }
+      }
+      &.bpr-large {
+        @include respondTo(above-phone) {
+           padding-right: $large;
+        }
+      }
+      &.bpr-x-large {
+        @include respondTo(above-phone) {
+           padding-right: $x-large;
+        }
+      }
+      &.bpr-huge {
+        @include respondTo(above-phone) {
+           padding-right: $huge;
+        }
+      }
+
+      .icon {
+        width: 80px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      img {
+         //margin-top: 25px;
+         max-width: 100%;
+         height: auto;
+      }
+
+      .btn {
+         margin-bottom: 10px;
+      }
+
+      .text, .heading {
+         max-width: 800px;
+      }
+
+      .text {
+        margin-left: auto;
+        margin-right: auto;
+        // MAX WIDTH HEADING
+        &.mwt-x-none {
+        }
+
+        &.mwt-x-small {
+          @include respondTo(above-phone) {
+             max-width: $mx-x-small;
+          }
+        }
+
+        &.mwt-small {
+          @include respondTo(above-phone) {
+             max-width: $mx-small;
+          }
+        }
+        &.mwt-medium {
+          @include respondTo(above-phone) {
+             max-width: $mx-medium;
+          }
+        }
+        &.mwt-large {
+          @include respondTo(above-phone) {
+             max-width: $mx-large;
+          }
+        }
+        &.mwt-x-large {
+          @include respondTo(above-phone) {
+             max-width: $mx-x-large;
+          }
+        }
+        &.mwt-huge {
+          @include respondTo(above-phone) {
+             max-width: $mx-huge;
+          }
+        }
+
+
+      }
+
+      .heading, .btn-wrapper {
+         text-align: center;
+      }
+   }
+
+
+
+   .quote-wrapper {
+      display: flex;
+      justify-content: center; /* align horizontal */
+      align-items: center; /* align vertical */
+      // font-family: $font-libre-baskerville;
+      // border-top: 1px solid $light-orange;
+      // border-bottom: 1px solid $light-orange;
+      margin-bottom: 20px;
+      width: 90%;
+      min-height: 300px;
+      @include respondTo(desktop,large){
+        min-height: 450px;
+      };
+      @include respondTo(phone,tablet) {
+        margin-top: 20px;
+      };
+
+      svg {
+        position: relative;
+        top: -140px;
+        left: -5px;
+        width: 35px;
+        @include respondTo(phone,tablet) {
+          margin-top: 30px;
+          width: 25px;
+        }
+
+        path {
+          //fill: red;
+        }
+      }
+      .quote-text {
+        max-width: 400px;
+
+        &.text {
+          p, ul, ol, li {
+            line-height: 1.5em;
+            font-size: 15px;
+            // font-family: $font-libre-baskerville;
+            letter-spacing: 1px;
+          }
+        }
+
+
+        .quote-credit {
+          // font-family: $font-raleway;
+          text-transform: uppercase;
+          position: relative;
+          left: 80px;
+          top: 20px;
+        }
+      }
+    }
+
+
+
+  //  .relationship {
+  //     margin-top: 60px;
+   //
+  //     .column {
+  //        @include respondTo(phone) {
+  //           clear: both;
+  //           margin-bottom: 60px;
+  //        }
+  //        @include respondTo(above-phone) {
+  //           padding-right: 40px;
+  //        }
+   //
+  //     }
+   //
+  //     .dates {
+  //        font-weight: 300;
+  //        font-style: italic;
+  //        font-size: 15px;
+  //        //color: $blue-dark;
+  //     }
+   //
+  //     h4 {
+  //        font-size: 20px;
+  //        //color: #fff;
+  //        font-weight: normal;
+  //        margin-top: 2px;
+  //        text-transform: inherit;
+   //
+  //        a {
+  //           //color: #fff;
+  //        }
+  //     }
+   //
+  //     .excerpt {
+  //        font-size: 15px;
+  //        //color: $blue-dark;
+  //        line-height: 1.75em;
+  //     }
+   //
+  //     h6 {
+  //        font-weight: bold;
+  //        font-size: 16px;
+  //        //color: $blue-dark;
+  //        width: 100%;
+  //        text-align: left;
+   //
+  //        a {
+  //           text-decoration: underline;
+  //           //color: $blue-dark;
+  //           margin-top: 2px;
+  //        }
+  //     }
+  //  }
+
+.extra-content {
+  margin-top: 40px;
+}
+
+  .gallery {
+    &.slick-responsive {
+      .slick-slide {
+        img {
+          padding: 30px;
+        }
+      }
+    }
+  }
+
+  .grid-list {
+    .item {
+      display: inline-block;
+      width: 50%;
+      float: left;
+      position: relative;
+      padding: 15px;
+    }
+    @include respondTo(above-phone) {
+      .item {
+        display: inline-block;
+        width: 33.33333333%;
+        float: left;
+        position: relative;
+        padding: 15px;
+      }
+    }
+
+    .icon {
+      width: 80px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h5 {
+      font-weight: bold;
+      font-size: 19px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+  }
+
+  .primary-cta {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .link {
+      text-decoration: underline;
+      letter-spacing: 2px;
+    }
+
+    &.left {
+      .btn, .link {
+        float: left;
+        @include respondTo(above-phone) {
+          margin-left: 100px;
+        }
+      }
+    }
+    &.right {
+      .btn, .link {
+        float: right;
+        @include respondTo(above-phone) {
+          margin-right: 100px;
+        }
+      }
+    }
+    &.center {
+      text-align: center;
+    }
+  }
+
+  .btn, .link {
+
+  }
+
+  // @ALTERNATE STYLES
+  &.style-alternate-01 {
+
+    .heading-top {
+
+      h2.heading {
+        font-size: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+        // font-family: $font-raleway;
+      }
+    }
+
+    .item {
+      .text {
+        p, ul, ol, li {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  &.style-alternate-02 {
+
+    .heading-top {
+
+      h2.heading {
+        font-size: 42px;
+        font-weight: 400;
+        //text-transform: uppercase;
+        // font-family: $font-raleway;
+        line-height: 1.15em;
+      }
+    }
+
+    .item {
+      .text {
+        p, ul, ol, li {
+          // font-family: $font-libre-baskerville;
+          font-size: 19px;
+        }
+      }
+    }
+  }
+
+  &.style-alternate-03 {
+
+    .heading-top {
+
+      h2.heading {
+        font-size: 43px;
+        font-weight: 400;
+        //text-transform: uppercase;
+        // font-family: $font-raleway;
+        line-height: 1.15em;
+      }
+    }
+
+    .item {
+      .text {
+        p, ul, ol, li {
+          // font-family: $font-raleway;
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}

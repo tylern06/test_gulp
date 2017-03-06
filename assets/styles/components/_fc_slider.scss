@@ -1,0 +1,207 @@
+.fc-slider.container-fluid {
+   padding: 0;
+}
+
+.slick-slider {
+
+   .slick-slide {
+      padding-left: 0;
+      padding-right: 0;
+      position: relative;
+      opacity: 1;
+      -webkit-transition: opacity 0.75s; /* Safari */
+       transition: opacity 0.75s;
+
+      img.slick-image {
+         height: 100%;
+         transform: skewX(3deg);
+      }
+
+      &:first-of-type {
+         padding-left: 0px;
+      }
+
+      &:last-of-type {
+         padding-right: 0px;
+      }
+
+      &:not(.slick-current) {
+         opacity: 0.5;
+      }
+   }
+
+   .slick-caption {
+      z-index: 15;
+      bottom: 0px;
+      position: absolute;
+      margin: 0;
+      text-align: left;
+      font-size: 19px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.9px;
+      padding: 10px 25px;
+      max-width: 100vw;
+
+      &.center-true {
+         left: 0;
+         right: 0;
+         margin-left: auto;
+         margin-right: auto;
+         text-align: center;
+      }
+   }
+
+   .slick-arrow {
+      position: absolute;
+      height: 50px;
+      z-index: 5;
+
+      &.slick-next-arrow {
+         right: 150px;
+
+         @include respondTo(desktop) {
+            right: 50px;
+         }
+
+         @include respondTo(tablet) {
+            right: 25px;
+         }
+
+         @include respondTo(phone) {
+            right: 5px;
+         }
+      }
+      &.slick-prev-arrow {
+         left: 150px;
+
+         @include respondTo(desktop) {
+            left: 50px;
+         }
+
+         @include respondTo(tablet) {
+            left: 25px;
+         }
+
+         @include respondTo(phone) {
+            left: 5px;
+         }
+      }
+
+      &.slick-disabled {
+         opacity: 0.25;
+      }
+
+      &:not(.slick-disabled) {
+         cursor: pointer;
+      }
+   }
+
+   &.captions-hidden {
+      .slick-caption {
+         display: none;
+      }
+   }
+
+   &.small {
+      .slick-slide {
+         height: 200px;
+      }
+
+      .slick-arrow {
+         top: 95px;
+      }
+
+      &.captions-under {
+         .slick-slide {
+            height: 300px;
+         }
+         img.slick-image {
+            height: 82%;
+         }
+      }
+   }
+   &.medium {
+      .slick-slide {
+         height: 600px;
+
+         @include respondTo(phone) {
+            height: 400px;
+         }
+      }
+
+      .slick-arrow {
+         top: 285px;
+
+         @include respondTo(phone) {
+            top: 180px;
+         }
+      }
+
+      &.captions-under {
+         .slick-slide {
+            height: 660px;
+
+            @include respondTo(phone) {
+               height: 440px;
+            }
+         }
+
+         img.slick-image {
+            height: 92%;
+
+            @include respondTo(phone) {
+               height: 88%;
+            }
+         }
+      }
+   }
+   &.large {
+      .slick-slide {
+         height: 900px;
+
+         @include respondTo(phone) {
+            height: 400px;
+         }
+      }
+
+      .slick-arrow {
+         top: 395px;
+
+         @include respondTo(phone) {
+            top: 180px;
+         }
+      }
+
+      &.captions-under {
+         .slick-slide {
+            @include respondTo(phone) {
+               height: 440px;
+            }
+         }
+
+         img.slick-image {
+            height: 94%;
+
+            @include respondTo(phone) {
+               height: 88%;
+            }
+         }
+      }
+   }
+
+   &.image-padding-small .slick-slide {
+      padding-left: 5px;
+      padding-right: 5px;
+   }
+
+   &.image-padding-medium .slick-slide {
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   &.image-padding-large .slick-slide {
+      padding-left: 35px;
+      padding-right: 35px;
+   }
+}

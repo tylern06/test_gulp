@@ -1,0 +1,82 @@
+.ginput_container {
+   margin-top: 0 !important;
+}
+
+.ginput_container input, .ginput_container textarea, .ginput_container select {
+   box-shadow: none;
+   height: 62px;
+   border: 1px solid transparent;
+   width: 100% !important;
+   font-style: italic;
+   font-weight: lighter;
+   font-size: 110% !important;
+   letter-spacing: 1.3px !important;
+   padding-left: 20px !important;
+}
+
+.ginput_container textarea {
+   padding-top: 15px !important;
+   height: 200px;
+}
+
+.gfield_select {
+   -webkit-appearance: none;
+   //-moz-appearance: none; //this worked on the ame commerce site with select:not([multiple]) but doesn't work here for FF so commenting out to use the FF native dropdown
+   background-color: transparent !important;
+    background-position: unquote("calc(100% - 25px)") 50%;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.09 6.09"><defs><style>.cls-1{fill:black;}</style></defs><g><path class="cls-1" d="M0,0H6.09L3,6.09Z"/></g></svg>');
+    padding: .5em;
+    padding-right: 1.5em;
+    border-radius: 0 !important;
+}
+
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label {
+   padding-top: 5px;
+   padding-left: 5px;
+   font-weight: 300;
+}
+
+.gfield_label {
+   font-style: italic;
+   font-weight: 300 !important;
+   margin-bottom: 0;
+   visibility: hidden;
+}
+
+.gfield_description {
+   margin-top: 0 !important;
+}
+
+.gfield {
+   margin-top: 0 !important;
+}
+
+.ginput_container_name label {
+   display: none !important;
+}
+
+.ginput_container_radio, .ginput_container_checkbox {
+   border: 1px solid transparent;
+}
+
+.gfield_radio, .gfield_checkbox {
+   padding: 8px 25px 0px 25px !important;
+   min-height: 62px;
+   margin-top: 0 !important;
+   margin-bottom: 0 !important;
+}
+
+.ginput_container input[type="radio"], .ginput_container input[type="checkbox"] {
+   height: 30px;
+}
+
+.gform_wrapper.gf_browser_ie .gform_footer input.button {
+   padding: 12px 22px;
+}
+
+.gform_footer {
+   text-align: center;
+   margin-top: 50px !important;
+}

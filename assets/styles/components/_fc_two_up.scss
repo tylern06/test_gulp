@@ -1,0 +1,110 @@
+.fc-two-up {
+
+   h2 {
+      margin: 0 auto;
+      max-width: 580px;
+      text-align: center;
+   }
+
+   h3.top-heading {
+      //max-width: 500px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+   }
+
+   &.layout-style-1 {
+      h3 {
+         margin-top: 10px;
+         margin-left: 0;
+         margin-right: 0;
+         padding-bottom: 25px;
+      }
+
+      &.container-fluid {
+         padding-left: 0;
+         padding-right: 0;
+      }
+
+      .container {
+         width: 1200px;
+         padding-left: 0;
+         padding-right: 0;
+
+         @include respondTo(desktop, tablet) {
+            width: 600px;
+         }
+
+         @include respondTo(phone) {
+            width: 100%;
+            max-width: 400px;
+         }
+      }
+
+      .text-side, .image-side {
+         @include respondTo(above-phone) {
+            width: 600px;
+            height: 600px;
+         }
+
+         @include respondTo(phone, tablet, desktop) {
+            height: auto;
+         }
+      }
+
+      .image-side {
+         padding: 0;
+         overflow: hidden;
+
+         @include respondTo(phone) {
+            width: 100%;
+            max-width: 400px;
+            max-height: 400px;
+         }
+
+         img {
+            margin-left: auto;
+            margin-right: auto;
+
+            @include respondTo(above-phone) {
+               min-height: 500px;
+               margin-top: 50px;
+               max-width: 525px;
+            }
+         }
+      }
+
+      .text-side {
+         padding-top: 20px;
+         padding-bottom: 20px;
+
+         @include respondTo(above-phone) {
+            padding: 50px;
+         }
+
+
+         //padding-top: 100px;
+      }
+   }
+}
+
+.fc-two-up.layout-style-2 {
+   .container {
+      max-width: 1230px;
+   }
+
+   .text-side {
+
+      @include respondTo(phone) {
+         &:last-of-type {
+            margin-top: 50px;
+         }
+      }
+      
+      @include respondTo(above-phone) {
+         padding-left: 50px;
+         padding-right: 50px;
+      }
+   }
+}

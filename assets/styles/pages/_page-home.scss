@@ -1,0 +1,277 @@
+#home {
+  h2 {
+    font-family: $font-source-sans-pro;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 0px;
+  }
+  .section-1 {
+    background: url('../../assets/images/card.png') no-repeat;
+    // background-attachment: fixed;
+    @include respondTo(phone,tablet) {
+      background-position: 25% -40%;
+
+    };
+
+    @include respondTo(above-tablet) {
+      background-position: left -190px bottom -240px;
+
+    };
+
+    min-height: 560px;
+    color: $white;
+    .outer-panel {
+      // width: 100%;
+      // height: 560px;
+      // display: flex;
+      // justify-content: center; /* align horizontal */
+      // align-items: center; /* align vertical */
+    }
+    .logo-box {
+      position: relative;
+      color: $black;
+      width: 300px;
+      height: 280px;
+      margin: 0 auto;
+      margin-top: 50px;
+      // border: 2px solid $light-teal;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+      svg {
+        &#left-border {
+          height: 280px;
+          width: 66px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        &#right-border {
+          height: 280px;
+          width: 66px;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        &#down-arrow {
+          max-width: 64px;
+          margin-top: 80px;
+          cursor: pointer;
+        }
+      }
+
+      p {
+        color: $black;
+        font-size: 14px;
+        max-width: 260px;
+        margin: 0 auto;
+        margin-top: 20px;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+        font-family: $font-lato-regular;
+      }
+
+    }
+  }
+  .section-2 {
+    h2 {
+      color: $brown;
+    }
+    p {
+      margin-top: 40px;
+      color: $light-brown;
+      font-family: $font-lato-light;
+      font-size: 17px;
+      @include respondTo(above-phone) {
+        max-width: 400px;
+
+      };
+      text-align: left;
+    }
+    .text-center {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+  .section-3 {
+    background-color: $lighter-brown;
+    min-height: 400px;
+  }
+
+  .section-4 {
+    .container-2 {
+      // border: 1px solid red;
+      margin: 0 auto;
+    }
+    .newsletter-block {
+      height: 532px;
+      @include respondTo(phone) {
+        height: 400px;
+      };
+      padding-top: 80px;
+      background: $lighter-teal;
+      h2 {
+        color: $lighter-brown;
+      }
+      .newsletter {
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+        #mce-EMAIL, #mc-embedded-subscribe {
+          max-width: 320px;
+          margin: 0 auto;
+          border-radius: 0;
+        }
+        #mc-embedded-subscribe {
+          background: $lighter-teal;
+          color: #aaa;
+          border: 1px solid $lighter-brown;
+        }
+        #mc_embed_signup input.email {
+          background: $lighter-teal;
+          margin-bottom: 20px;
+          border: 1px solid $teal;
+          height: 40px;
+          margin-top: 10px;
+          font-family: $font-lato-light-italic;
+          font-size: 15px;
+          padding-left: 15px;
+        }
+        #mc_embed_signup form {
+          background: $lighter-teal;
+        }
+        #mc_embed_signup .button {
+          height: 48px;
+          padding: 5px 40px 3px 40px;
+          max-width: 145px;
+          font-size: 18px;
+          color: $brown;
+          border: 1px solid $brown;
+          font-family: $font-source-sans-pro;
+        }
+      }
+    }
+    .contact-block {
+      @include respondTo(phone) {
+        position: relative;
+        bottom: 10px;
+      };
+      min-height: 532px;
+      padding-top: 80px;
+      padding-bottom: 30px;
+      background: $off-teal;
+      h2 {
+        color: $white;
+      }
+      .contact {
+        margin: 0 auto;
+        max-width: 500px;
+        .gform_wrapper form {
+          margin-top: -15px;
+        }
+        .gform_wrapper {
+          max-width: 99%;
+          overflow: hidden;
+        }
+
+        input, textarea {
+          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $white;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: $white;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: $white;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: $white;
+          }
+
+        }
+        input#input_1_1_3, input#input_1_1_6, input#input_1_2 {
+          height: 38px;
+          background: $teal;
+          font-size: 15px !important;
+          font-family: $font-lato-light-italic;
+          color: $white;
+        }
+
+        input#input_1_3 {
+          height: 80px;
+        }
+
+        input#input_1_1_3 {
+          @media (max-width: 640px) {
+            margin-bottom: 20px;
+          }
+        }
+
+        input#input_1_2 {
+          @media (max-width: 640px) {
+            margin-bottom: 10px;
+          }
+        }
+
+
+
+        textarea#input_1_3 {
+          font-size: 15px !important;
+          font-family: $font-lato-light-italic;
+          color: $white;
+          background: $teal;
+        }
+
+        input#gform_submit_button_1 {
+          height: 48px;
+          background: $off-teal;
+          border: 1px solid $white;
+          color: $white;
+          font-family: $font-source-sans-pro;
+          padding: 5px 40px 3px 40px;
+          font-size: 18px;
+          @include respondTo(phone) {
+            max-width: 145px;
+          };
+          text-transform: uppercase;
+        }
+        .gform_footer {
+          margin-top: 0 !important;
+        }
+
+        #gform_confirmation_message_1 {
+          color: $white;
+          font-family: $font-lato-light;
+        }
+      } // end of contact
+    } //end of contact block
+  }
+
+  .section-5 {
+    text-align: center;
+    color: $teal;
+    svg {
+      max-height: 28px;
+      max-width: 28px;
+      margin-right: 15px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: $font-lato-light;
+      font-size: 10px;
+      text-transform: uppercase;
+      a {
+        color: $teal;
+      }
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+}

@@ -1,0 +1,113 @@
+.panel-orange {
+  // background: $dark-orange;
+  min-height: 300px;
+  text-align: center;
+  padding-top: 50px;
+  .text-wrapper {
+    padding: 30px 20px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    @include respondTo(desktop, large){
+      max-width: 750px;
+    };
+    h2, img {
+      margin: 0;
+      display: inline;
+    }
+    h2 {
+      letter-spacing: 1px;
+      color: white;
+    }
+    img {
+      position: relative;
+      max-width: 35px;
+      bottom: 5px;
+      right: 10px;
+    }
+  }
+  img {
+    display: inline-block;
+    max-width: 140px;
+    margin-right: 10px;
+  }
+  .button {
+    margin-top: 40px;
+    float: right;
+    color: white;
+    &:hover {
+      // color: $darkest-navy;
+    }
+  }
+}
+.panel-white {
+  @extend .panel-orange;
+  background: $white;
+  .text-wrapper {
+    h2 {
+      // color: $light-black;
+    }
+  }
+  .button {
+    // background: $orange;
+  }
+}
+
+.panel-blue {
+  @extend .panel-orange;
+  .text-wrapper {
+    h2 {
+      color: $white;
+    }
+  }
+  .button {
+    // background: $orange;
+  }
+}
+
+.panel-image {
+  // background: url('../../assets/images/img-panel.png') no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  .text-overlay {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    position: relative;
+    top: 250px;
+    @include respondTo(desktop,large){
+      width: 450px;
+
+    };
+    // width: 450px;
+    height: 320px;
+    // background: $orange-transparent;
+    .text-wrapper {
+      margin: 0 auto;
+      @include respondTo(desktop,large){
+        width: 350px;
+
+      };
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    img {
+      width: 35px;
+    }
+    h3 {
+      letter-spacing: 1px;
+      text-align: left;
+      color: $white;
+      text-transform: uppercase;
+    }
+    p {
+      text-align: left;
+      font-size: 14px;
+    }
+  }
+  .button {
+    margin: 0;
+    margin-top: 20px;
+    color: $white;
+    font-size: 14px;
+  }
+}
