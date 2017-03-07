@@ -1,3 +1,4 @@
-
-var world = 20300;
-console.log(world);
+$(function() {
+    console.log( "ready!" );
+    var ti;
+});

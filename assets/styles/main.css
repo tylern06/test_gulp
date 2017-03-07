@@ -1155,28 +1155,29 @@ a {
     color: white;
     font-size: 14px; }
 
-#shart h2 {
+#home h2 {
+  margin-top: 200px !important;
   font-family: "SourceSansPro";
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 40px;
   text-align: center;
   letter-spacing: 2px;
   margin-top: 0px; }
 
-#shart .section-1 {
+#home .section-1 {
   background: url("../../assets/images/card.png") no-repeat;
   min-height: 560px;
   color: white; }
   @media (max-width: 767px) {
-    #shart .section-1 {
+    #home .section-1 {
       background-position: 25% -40%; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    #shart .section-1 {
+    #home .section-1 {
       background-position: 25% -40%; } }
   @media (min-width: 992px) {
-    #shart .section-1 {
+    #home .section-1 {
       background-position: left -190px bottom -240px; } }
-  #shart .section-1 .logo-box {
+  #home .section-1 .logo-box {
     position: relative;
     color: black;
     width: 300px;
@@ -1186,23 +1187,23 @@ a {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center; }
-    #shart .section-1 .logo-box svg#left-border {
+    #home .section-1 .logo-box svg#left-border {
       height: 280px;
       width: 66px;
       position: absolute;
       top: 0;
       left: 0; }
-    #shart .section-1 .logo-box svg#right-border {
+    #home .section-1 .logo-box svg#right-border {
       height: 280px;
       width: 66px;
       position: absolute;
       top: 0;
       right: 0; }
-    #shart .section-1 .logo-box svg#down-arrow {
+    #home .section-1 .logo-box svg#down-arrow {
       max-width: 64px;
       margin-top: 80px;
       cursor: pointer; }
-    #shart .section-1 .logo-box p {
+    #home .section-1 .logo-box p {
       color: black;
       font-size: 14px;
       max-width: 260px;
@@ -1212,52 +1213,52 @@ a {
       letter-spacing: 0.5px;
       font-family: "LatoRegular"; }
 
-#shart .section-2 h2 {
+#home .section-2 h2 {
   color: #533617; }
 
-#shart .section-2 p {
+#home .section-2 p {
   margin-top: 40px;
   color: #523a20;
   font-family: "LatoLight";
   font-size: 17px;
   text-align: left; }
   @media (min-width: 768px) {
-    #shart .section-2 p {
+    #home .section-2 p {
       max-width: 400px; } }
 
-#shart .section-2 .text-center {
+#home .section-2 .text-center {
   max-width: 900px;
   margin: 0 auto; }
 
-#shart .section-3 {
+#home .section-3 {
   background-color: #ad9fff;
   min-height: 400px; }
 
-#shart .section-4 .container-2 {
+#home .section-4 .container-2 {
   margin: 0 auto; }
 
-#shart .section-4 .newsletter-block {
+#home .section-4 .newsletter-block {
   height: 532px;
   padding-top: 80px;
   background: #e2f7ef; }
   @media (max-width: 767px) {
-    #shart .section-4 .newsletter-block {
+    #home .section-4 .newsletter-block {
       height: 400px; } }
-  #shart .section-4 .newsletter-block h2 {
+  #home .section-4 .newsletter-block h2 {
     color: #ad9fff; }
-  #shart .section-4 .newsletter-block .newsletter {
+  #home .section-4 .newsletter-block .newsletter {
     text-align: center;
     max-width: 400px;
     margin: 0 auto; }
-    #shart .section-4 .newsletter-block .newsletter #mce-EMAIL, #shart .section-4 .newsletter-block .newsletter #mc-embedded-subscribe {
+    #home .section-4 .newsletter-block .newsletter #mce-EMAIL, #home .section-4 .newsletter-block .newsletter #mc-embedded-subscribe {
       max-width: 320px;
       margin: 0 auto;
       border-radius: 0; }
-    #shart .section-4 .newsletter-block .newsletter #mc-embedded-subscribe {
+    #home .section-4 .newsletter-block .newsletter #mc-embedded-subscribe {
       background: #e2f7ef;
       color: #aaa;
       border: 1px solid #ad9fff; }
-    #shart .section-4 .newsletter-block .newsletter #mc_embed_signup input.email {
+    #home .section-4 .newsletter-block .newsletter #mc_embed_signup input.email {
       background: #e2f7ef;
       margin-bottom: 20px;
       border: 1px solid #8cb5a4;
@@ -1266,9 +1267,9 @@ a {
       font-family: "LatoLightItalic";
       font-size: 15px;
       padding-left: 15px; }
-    #shart .section-4 .newsletter-block .newsletter #mc_embed_signup form {
+    #home .section-4 .newsletter-block .newsletter #mc_embed_signup form {
       background: #e2f7ef; }
-    #shart .section-4 .newsletter-block .newsletter #mc_embed_signup .button {
+    #home .section-4 .newsletter-block .newsletter #mc_embed_signup .button {
       height: 48px;
       padding: 5px 40px 3px 40px;
       max-width: 145px;
@@ -1277,57 +1278,57 @@ a {
       border: 1px solid #533617;
       font-family: "SourceSansPro"; }
 
-#shart .section-4 .contact-block {
+#home .section-4 .contact-block {
   min-height: 532px;
   padding-top: 80px;
   padding-bottom: 30px;
   background: #a0caba; }
   @media (max-width: 767px) {
-    #shart .section-4 .contact-block {
+    #home .section-4 .contact-block {
       position: relative;
       bottom: 10px; } }
-  #shart .section-4 .contact-block h2 {
+  #home .section-4 .contact-block h2 {
     color: white; }
-  #shart .section-4 .contact-block .contact {
+  #home .section-4 .contact-block .contact {
     margin: 0 auto;
     max-width: 500px; }
-    #shart .section-4 .contact-block .contact .gform_wrapper form {
+    #home .section-4 .contact-block .contact .gform_wrapper form {
       margin-top: -15px; }
-    #shart .section-4 .contact-block .contact .gform_wrapper {
+    #home .section-4 .contact-block .contact .gform_wrapper {
       max-width: 99%;
       overflow: hidden; }
-    #shart .section-4 .contact-block .contact input::-webkit-input-placeholder, #shart .section-4 .contact-block .contact textarea::-webkit-input-placeholder {
+    #home .section-4 .contact-block .contact input::-webkit-input-placeholder, #home .section-4 .contact-block .contact textarea::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       color: white; }
-    #shart .section-4 .contact-block .contact input::-moz-placeholder, #shart .section-4 .contact-block .contact textarea::-moz-placeholder {
+    #home .section-4 .contact-block .contact input::-moz-placeholder, #home .section-4 .contact-block .contact textarea::-moz-placeholder {
       /* Firefox 19+ */
       color: white; }
-    #shart .section-4 .contact-block .contact input:-ms-input-placeholder, #shart .section-4 .contact-block .contact textarea:-ms-input-placeholder {
+    #home .section-4 .contact-block .contact input:-ms-input-placeholder, #home .section-4 .contact-block .contact textarea:-ms-input-placeholder {
       /* IE 10+ */
       color: white; }
-    #shart .section-4 .contact-block .contact input:-moz-placeholder, #shart .section-4 .contact-block .contact textarea:-moz-placeholder {
+    #home .section-4 .contact-block .contact input:-moz-placeholder, #home .section-4 .contact-block .contact textarea:-moz-placeholder {
       /* Firefox 18- */
       color: white; }
-    #shart .section-4 .contact-block .contact input#input_1_1_3, #shart .section-4 .contact-block .contact input#input_1_1_6, #shart .section-4 .contact-block .contact input#input_1_2 {
+    #home .section-4 .contact-block .contact input#input_1_1_3, #home .section-4 .contact-block .contact input#input_1_1_6, #home .section-4 .contact-block .contact input#input_1_2 {
       height: 38px;
       background: #8cb5a4;
       font-size: 15px !important;
       font-family: "LatoLightItalic";
       color: white; }
-    #shart .section-4 .contact-block .contact input#input_1_3 {
+    #home .section-4 .contact-block .contact input#input_1_3 {
       height: 80px; }
     @media (max-width: 640px) {
-      #shart .section-4 .contact-block .contact input#input_1_1_3 {
+      #home .section-4 .contact-block .contact input#input_1_1_3 {
         margin-bottom: 20px; } }
     @media (max-width: 640px) {
-      #shart .section-4 .contact-block .contact input#input_1_2 {
+      #home .section-4 .contact-block .contact input#input_1_2 {
         margin-bottom: 10px; } }
-    #shart .section-4 .contact-block .contact textarea#input_1_3 {
+    #home .section-4 .contact-block .contact textarea#input_1_3 {
       font-size: 15px !important;
       font-family: "LatoLightItalic";
       color: white;
       background: #8cb5a4; }
-    #shart .section-4 .contact-block .contact input#gform_submit_button_1 {
+    #home .section-4 .contact-block .contact input#gform_submit_button_1 {
       height: 48px;
       background: #a0caba;
       border: 1px solid white;
@@ -1337,27 +1338,27 @@ a {
       font-size: 18px;
       text-transform: uppercase; }
       @media (max-width: 767px) {
-        #shart .section-4 .contact-block .contact input#gform_submit_button_1 {
+        #home .section-4 .contact-block .contact input#gform_submit_button_1 {
           max-width: 145px; } }
-    #shart .section-4 .contact-block .contact .gform_footer {
+    #home .section-4 .contact-block .contact .gform_footer {
       margin-top: 0 !important; }
-    #shart .section-4 .contact-block .contact #gform_confirmation_message_1 {
+    #home .section-4 .contact-block .contact #gform_confirmation_message_1 {
       color: white;
       font-family: "LatoLight"; }
 
-#shart .section-5 {
+#home .section-5 {
   text-align: center;
   color: #8cb5a4; }
-  #shart .section-5 svg {
+  #home .section-5 svg {
     max-height: 28px;
     max-width: 28px;
     margin-right: 15px;
     margin-bottom: 20px; }
-  #shart .section-5 p {
+  #home .section-5 p {
     font-family: "LatoLight";
     font-size: 10px;
     text-transform: uppercase; }
-    #shart .section-5 p a {
+    #home .section-5 p a {
       color: #8cb5a4; }
-  #shart .section-5 a:hover {
+  #home .section-5 a:hover {
     text-decoration: none; }

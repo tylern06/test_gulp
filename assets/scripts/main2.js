@@ -1,3 +1,5 @@
-var test2 = 1230;
+var test2 = 12;
 
-alert(test2);
+console.log(test2 + 5);
+
+// alert(test2);

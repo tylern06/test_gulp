@@ -19,7 +19,8 @@
     "gulp-sass-bulk-import": "^1.0.1",
     "gulp-uglify": "^2.0.1",
     "gulp-watch": "^4.3.11",
-    "jshint": "^2.9.4"
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1"
   },
   "dependencies": {}
 }
