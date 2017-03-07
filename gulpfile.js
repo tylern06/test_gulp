@@ -9,15 +9,15 @@ var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 
-//pipe allow use chain functions together, i.e  method returns a reference to the destination stream making it possible to set up chains of piped streams:
+//pipe allows us to chain functions together, i.e  method returns a reference to the destination stream making it possible to set up chains of piped streams:
 
 gulp.task('sass', function() {
   //source file
   return gulp.src('./assets/styles/main.scss')
-    //for @import /*
+    //for Sass @import /*
     .pipe(bulkSass())
     //compile files
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     //destination directory
     .pipe(gulp.dest('./assets/styles'))
     .pipe(notify({
@@ -41,7 +41,10 @@ gulp.task('minify-scripts', function() {
 gulp.task('minify-css', function() {
   return gulp.src('./assets/styles/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./dist/styles'));
+    .pipe(gulp.dest('./dist/styles'))
+    .pipe(notify({
+      message: 'CSS minified'
+    }));
 });
 
 //watch all the tasks on file changes
@@ -56,7 +59,12 @@ gulp.task('watch', function() {
    scriptsWatcher.on('change', function(event) {
      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
    });
+
+   var stylesWatcher = gulp.watch('./assets/styles/**/*.css',['minify-css']);
+   scriptsWatcher.on('change', function(event) {
+     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+   });
 }); //end of watch task
 
-//run 'gulp' in terminal to run array of tasks``
+//run 'gulp' in terminal to run array of tasks
 gulp.task('default', ['sass','minify-scripts','minify-css','watch']);
