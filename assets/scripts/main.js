@@ -1,4 +1,4 @@
 $(function() {
-    console.log( "ready!" );
+    console.log( "ready or not!" );
     var ti;
 });

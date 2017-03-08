@@ -15,7 +15,6 @@
     "gulp-jshint": "^2.0.4",
     "gulp-notify": "^3.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-rev-delete-original": "^0.2.3",
     "gulp-sass": "^3.1.0",
     "gulp-sass-bulk-import": "^1.0.1",
     "gulp-uglify": "^2.0.1",

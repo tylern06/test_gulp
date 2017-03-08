@@ -51,13 +51,17 @@ gulp.task('minify-scripts', function() {
   .pipe(concat('main.min.js'))
   .pipe(uglify())
   // .pipe(rename({suffix: '.min'}))
+  .pipe(rev())
+  .pipe(gulp.dest(config.scripts.dest))
+  .pipe(rev.manifest())
+  .pipe(revDel({ dest: './dist/script' }))
   .pipe(gulp.dest(config.scripts.dest))
   .pipe(notify({
     message: 'Javascript minified'
   }));
 })
 
-//minify css files
+//minify css files and add hash revision filename
 gulp.task('minify-css', function() {
   return gulp.src(config.styles.src)
     .pipe(cleanCSS({compatibility: 'ie8'}))
