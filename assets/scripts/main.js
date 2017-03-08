@@ -1,4 +1,5 @@
 $(function() {
     console.log( "ready or not!" );
-    var ti;
+    var world = 5000;
+    console.log(world);
 });

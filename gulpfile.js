@@ -54,7 +54,7 @@ gulp.task('minify-scripts', function() {
   .pipe(rev())
   .pipe(gulp.dest(config.scripts.dest))
   .pipe(rev.manifest())
-  .pipe(revDel({ dest: './dist/script' }))
+  .pipe(revDel({ dest: './dist/scripts' }))
   .pipe(gulp.dest(config.scripts.dest))
   .pipe(notify({
     message: 'Javascript minified'
