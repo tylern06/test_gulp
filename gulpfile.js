@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var bulkSass = require('gulp-sass-bulk-import');
 var notify = require('gulp-notify');
-var gutil = require('gulp-util');
+// var gutil = require('gulp-util');
 var watch = require('gulp-watch');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -11,7 +11,8 @@ var rename = require('gulp-rename');
 var jshint = require('gulp-jshint');
 var rev = require('gulp-rev');
 var revDel = require('rev-del');
-
+var imagemin = require('gulp-imagemin');
+var autoPrefixer = require('gulp-autoprefixer');
 
 //.pipe() is just a function that takes a readable source stream src and hooks the output to a destination writable stream dst:
 
@@ -27,6 +28,10 @@ var config = {
   scripts : {
     src : './assets/scripts/**/*.js',
     dest : './dist/scripts'
+  },
+  images : {
+    src : './assets/images/*',
+    dest : './dist/images'
   }
 }
 
@@ -75,9 +80,23 @@ gulp.task('minify-css', function() {
     }));
 });
 
+//minify images and add hash revision filename
+gulp.task('minify-images', function() {
+  gulp.src('./assets/images/*')
+      .pipe(imagemin())
+      .pipe(rev())
+      .pipe(gulp.dest('./dist/images'))
+      .pipe(rev.manifest())
+      .pipe(revDel({ dest: './dist/images' }))
+      .pipe(gulp.dest('./dist/images'))
+      .pipe(notify({
+        message: 'Images minified'
+      }));
+});
+
 //lint task, js error handling
 gulp.task('lint', function() {
-  return gulp.src('./assets/scripts/**/*.js')
+  return gulp.src(config.scripts.src)
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
 })
@@ -90,16 +109,21 @@ gulp.task('watch', function() {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });
 
-   var scriptsWatcher = gulp.watch('./assets/scripts/**/*.js',['lint','minify-scripts']);
+   var scriptsWatcher = gulp.watch(config.scripts.src, ['lint','minify-scripts']);
    scriptsWatcher.on('change', function(event) {
      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
    });
 
-   var stylesWatcher = gulp.watch(config.styles.src,['minify-css']);
+   var stylesWatcher = gulp.watch(config.styles.src, ['minify-css']);
    scriptsWatcher.on('change', function(event) {
+     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+   });
+
+   var imageWatcher = gulp.watch(config.images.src, ['minify-images']);
+   imageWatcher.on('change', function(event) {
      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
    });
 }); //end of watch task
 
 //run 'gulp' in terminal to run array of tasks
-gulp.task('default', ['sass','minify-scripts','minify-css','lint','watch']);
+gulp.task('default', ['sass','minify-scripts','minify-css','minify-images','lint','watch']);
