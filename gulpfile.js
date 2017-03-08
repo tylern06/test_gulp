@@ -9,36 +9,49 @@ var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var jshint = require('gulp-jshint');
+var rev = require('gulp-rev');
+var revDel = require('rev-del');
+
 
 //.pipe() is just a function that takes a readable source stream src and hooks the output to a destination writable stream dst:
 
 var config = {
   sass : {
-    src: 'hi'
+    src : './assets/styles/**/*.scss',
+    dest : './assets/styles'
+  },
+  styles : {
+    src: './assets/styles/**/*.css',
+    dest: './dist/styles'
+  },
+  scripts : {
+    src : './assets/scripts/**/*.js',
+    dest : './dist/scripts'
   }
 }
+
 gulp.task('sass', function() {
   //source file
-  return gulp.src('./assets/styles/**/*.scss')
+  return gulp.src(config.sass.src)
     //for Sass @import /*
     .pipe(bulkSass())
     //compile files
     .pipe(sass().on('error', sass.logError))
     //destination directory
-    .pipe(gulp.dest('./assets/styles'))
+    .pipe(gulp.dest(config.sass.dest))
     .pipe(notify({
-      message: 'Sass done compiling'
+      message: 'Sass compiled'
     }));
 });
 
 //combine and minify JS files
 gulp.task('minify-scripts', function() {
-  gulp.src('./assets/scripts/**/*.js')
+  gulp.src(config.scripts.src)
   //merge js files
   .pipe(concat('main.min.js'))
   .pipe(uglify())
   // .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest('./dist/scripts'))
+  .pipe(gulp.dest(config.scripts.dest))
   .pipe(notify({
     message: 'Javascript minified'
   }));
@@ -46,9 +59,13 @@ gulp.task('minify-scripts', function() {
 
 //minify css files
 gulp.task('minify-css', function() {
-  return gulp.src('./assets/styles/**/*.css')
+  return gulp.src(config.styles.src)
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./dist/styles'))
+    .pipe(rev())
+    .pipe(gulp.dest(config.styles.dest))
+    .pipe(rev.manifest())
+    .pipe(revDel({ dest: './dist/styles' }))
+    .pipe(gulp.dest(config.styles.dest))
     .pipe(notify({
       message: 'CSS minified'
     }));
@@ -64,7 +81,7 @@ gulp.task('lint', function() {
 //watch all the tasks on file changes
 gulp.task('watch', function() {
   //watch all scss files in the styles directory and run sass task
-  var sassWatcher = gulp.watch('./assets/styles/**/*.scss', ['sass']);
+  var sassWatcher = gulp.watch(config.sass.src, ['sass']);
   sassWatcher.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });
@@ -74,7 +91,7 @@ gulp.task('watch', function() {
      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
    });
 
-   var stylesWatcher = gulp.watch('./assets/styles/**/*.css',['minify-css']);
+   var stylesWatcher = gulp.watch(config.styles.src,['minify-css']);
    scriptsWatcher.on('change', function(event) {
      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
    });
