@@ -1,5 +1,5 @@
 $(function() {
-    console.log( "ready or not!" );
+    console.log( "readyß!" );
     var world = 1234;
     console.log(world);
 });

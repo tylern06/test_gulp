@@ -1,8 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var bulkSass = require('gulp-sass-bulk-import');
+var sassGlob = require('gulp-sass-glob');
 var notify = require('gulp-notify');
-// var gutil = require('gulp-util');
 var watch = require('gulp-watch');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -13,6 +12,9 @@ var rev = require('gulp-rev');
 var revDel = require('rev-del');
 var imagemin = require('gulp-imagemin');
 var autoPrefixer = require('gulp-autoprefixer');
+var RevAll = require('gulp-rev-all');
+// var useref = require('gulp-useref');
+// var revReplace = require("gulp-rev-replace");
 
 //.pipe() is just a function that takes a readable source stream src and hooks the output to a destination writable stream dst:
 
@@ -39,7 +41,7 @@ gulp.task('sass', function() {
   //source file
   return gulp.src(config.sass.src)
     //for Sass @import /*
-    .pipe(bulkSass())
+    .pipe(sassGlob())
     //compile files
     .pipe(sass().on('error', sass.logError))
     //destination directory
@@ -80,6 +82,7 @@ gulp.task('minify-css', function() {
     }));
 });
 
+
 //minify images and add hash revision filename
 gulp.task('minify-images', function() {
   gulp.src('./assets/images/*')
@@ -100,6 +103,21 @@ gulp.task('lint', function() {
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
 })
+
+//
+// gulp.task('useref', function () {
+//     return gulp.src('./*.html')
+//         .pipe(useref())
+//         .pipe(gulp.dest('dist/styles'));
+// });
+
+// gulp.task("revreplace", ["minify-css"], function(){
+//   var manifest = gulp.src("./dist/styles/rev-manifest.json");
+//
+//   return gulp.src("./index.html")
+//     .pipe(revReplace({manifest: manifest}))
+//     .pipe(gulp.dest('.dist/styles'));
+// });
 
 //watch all the tasks on file changes
 gulp.task('watch', function() {
@@ -126,4 +144,4 @@ gulp.task('watch', function() {
 }); //end of watch task
 
 //run 'gulp' in terminal to run array of tasks
-gulp.task('default', ['sass','minify-scripts','minify-css','minify-images','lint','watch']);
+gulp.task('default', ['sass','minify-scripts','minify-images','minify-css', 'lint','watch']);

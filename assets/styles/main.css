@@ -50,10 +50,8 @@ p, ul, ol, li {
   padding-top: 80px;
   padding-bottom: 80px; }
 
-body {
-  background: red; }
-  body.page {
-    background: white; }
+body.page {
+  background: white; }
 
 .container-fluid {
   padding: 0; }
